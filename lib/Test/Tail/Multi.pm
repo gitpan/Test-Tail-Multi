@@ -4,7 +4,7 @@ use 5.006001;
 use strict;
 use warnings;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use File::Tail;
 use Test::Builder;
@@ -139,9 +139,33 @@ to "settle down" before checking the tails.
 C<Test::Tail::Multi> comes in handy for those testing jobs that require 
 you to monitor several files at once to see what's happening in each one.
 
+=head1 TEST SUBROUTINES
+
+=head2 add_file
+
+Adds another file to the list of files to be tailed.
+
+=head2 contents_like
+
+Executes code and then looks through the lines just generated to see if that
+text appears. If the code to execute is C<undef>, then the last set of lines
+generated is checked again.
+
+=head2 contents_unlike
+
+Works the same as C<contents_like>, except the sense of the test is 
+reversed, succeeding if the pattern supplied does I<not> match.
+
+=head2 delay
+
+The amount of time C<Test::Tail::Multi> waits for output to be generated
+before testing. Allows you to tune your test speed to match the expected
+running time of your code. Useful in detecting timeout situations (output
+should have been generated after 10 seconds, but wasn't).
+
 =head1 AUTHOR
 
-Joe McMahon, E<lt>mcmahon@yahoo-inc.comE<gt>
+Joe McMahon, E<lt>mcmahon@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 

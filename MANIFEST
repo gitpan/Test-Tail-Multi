@@ -1,9 +1,8 @@
 Changes
-lib/Test/Tail/Multi.pm
-Makefile.PL
 MANIFEST
-META.yml
+Makefile.PL
 README
+lib/Test/Tail/Multi.pm
 t/01load.t
 t/02import.t
 t/03add.t
@@ -17,6 +16,5 @@ t/08delay.t
 t/bar
 t/baz
 t/foo
-t/pod-coverage.t
-t/pod.t
 t/quux
+META.yml                                 Module meta-data (added by MakeMaker)

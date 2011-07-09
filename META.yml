@@ -1,13 +1,23 @@
-# http://module-build.sourceforge.net/META-spec.html
-#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
-name:         Test-Tail-Multi
-version:      0.03
-version_from: lib/Test/Tail/Multi.pm
-installdirs:  site
+--- #YAML:1.0
+name:               Test-Tail-Multi
+version:            0.04
+abstract:           ~
+author:
+    - Joe McMahon <joe@corp.yahoo.com>
+license:            unknown
+distribution_type:  module
+configure_requires:
+    ExtUtils::MakeMaker:  0
+build_requires:
+    ExtUtils::MakeMaker:  0
 requires:
-    File::Tail:                    0
-    Test::Builder:                 0
-    Test::Builder::Tester:         0
-
-distribution_type: module
-generated_by: ExtUtils::MakeMaker version 6.28
+    File::Tail:    0
+    Test::Simple:  0.98
+no_index:
+    directory:
+        - t
+        - inc
+generated_by:       ExtUtils::MakeMaker version 6.55_02
+meta-spec:
+    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
+    version:  1.4
